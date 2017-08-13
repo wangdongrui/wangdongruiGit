@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>拿数字</title>
+	</head>
+	<body>
+	</body>
+</html>
+<script>
+	var str='abc12 123 a124 126bbb aa666';
+	var arr=[];
+	var tmp='';
+	for (var i = 0; i < str.length; i++) {
+		if(str.charAt(i)>='0' && str.charAt(i)<='9'){
+			tmp+=str.charAt(i);
+		}else{
+			if(tmp){
+				arr.push(tmp);
+				tmp='';
+			}
+		}
+	}
+	console.log(arr);
+</script>

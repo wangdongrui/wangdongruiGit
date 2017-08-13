@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var urll = window.location.href;
+		function run(urll){
+			var obj={};
+			urll.indexOf('?')==-1?obj=alert('mei'):run();
+			urll = urll || window.location.href;
+//			a=1&b=2;
+			var arr = urll.split('?')[1].split('&');
+//			console.log(arr);
+			for (var i = 0; i < arr.length; i++) {
+				var arr2 = arr[i].split('=');
+				obj[arr2[0]] = arr2[1];
+			};
+			return obj;
+		};
+		console.log(run());
+	</script>
+</html>
